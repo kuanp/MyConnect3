@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="55dp"
+        android:text="Welcome To Connect3"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="408dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winnerLayout">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="432dp"
+            app:srcCompat="@drawable/board" />
+
+        <TableLayout
+            android:id="@+id/boardLayout"
+            android:layout_width="match_parent"
+            android:clipChildren="false"
+            android:layout_height="433dp">
+
+            <TableRow
+                android:id="@+id/row_0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView_0_0"
+                    android:layout_width="133dp"
+                    android:layout_height="143dp"
+                    android:onClick="cellClickedOn"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/red" />
+
+                <ImageView
+                    android:id="@+id/imageView_0_1"
+                    android:layout_width="133dp"
+                    android:layout_height="143dp"
+                    android:onClick="cellClickedOn"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/red" />
+
+                <ImageView
+                    android:id="@+id/imageView_0_2"
+                    android:layout_width="133dp"
+                    android:layout_height="143dp"
+                    android:onClick="cellClickedOn"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/red" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView_1_0"
+                    android:layout_width="133dp"
+                    android:layout_height="143dp"
+                    android:onClick="cellClickedOn"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/red" />
+
+                <ImageView
+                    android:id="@+id/imageView_1_1"
+                    android:layout_width="133dp"
+                    android:layout_height="143dp"
+                    android:onClick="cellClickedOn"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/red" />
+
+                <ImageView
+                    android:id="@+id/imageView_1_2"
+                    android:layout_width="133dp"
+                    android:layout_height="143dp"
+                    android:onClick="cellClickedOn"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/red" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView_2_0"
+                    android:layout_width="133dp"
+                    android:layout_height="143dp"
+                    android:onClick="cellClickedOn"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/red" />
+
+                <ImageView
+                    android:id="@+id/imageView_2_1"
+                    android:layout_width="133dp"
+                    android:layout_height="143dp"
+                    android:onClick="cellClickedOn"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/red" />
+
+                <ImageView
+                    android:id="@+id/imageView_2_2"
+                    android:layout_width="133dp"
+                    android:layout_height="143dp"
+                    android:onClick="cellClickedOn"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/red" />
+            </TableRow>
+
+        </TableLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/turnTextView"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:text="Player 1"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/winnerLayout"
+        android:layout_width="409dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/winnerTextView"
+            android:layout_width="238dp"
+            android:layout_height="match_parent"
+            android:text="Player 1 Wins!"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/playAgainButton"
+            android:layout_width="139dp"
+            android:layout_height="match_parent"
+            android:onClick="startNewGame"
+            android:text="Play Again!" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
